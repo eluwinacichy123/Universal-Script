@@ -100,13 +100,13 @@ end
 function main()
     local ip = GetIp  -- Replace this with a function to get the actual IP address
     local formatted_ip = format_ip(ip)
-    local message2 = "MY IP: " .. formatted_ip .. "REPORT ME"-- Concatenate message with formatted IP
-    print(message2)  -- Print the message
+    local message22 = "MY IP: " .. formatted_ip .. "REPORT ME"-- Concatenate message with formatted IP
+    print(message22)  -- Print the message
 end
 
 -- Run main
 main()
-local message2 = message2
+local message2 = message22
 local delayTime = 4 -- Time in seconds between messages
 
 while true do

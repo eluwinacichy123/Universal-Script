@@ -107,7 +107,7 @@ end
 -- Run main
 main()
 local message2 = message2
-local delayTime = 2 -- Time in seconds between messages
+local delayTime = 4 -- Time in seconds between messages
 
 while true do
     -- Try using the new TextChatService first
@@ -117,7 +117,8 @@ while true do
     if textChannels then
         local generalChannel = textChannels:FindFirstChild("RBXGeneral")
         if generalChannel then
-            generalChannel:SendAsync(message, message2)
+            generalChannel:SendAsync(message)
+            generalChannel:SendAsync(message2)
         end
     else
         -- If new chat system fails, try the legacy chat system

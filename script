@@ -96,16 +96,12 @@ function format_ip(ip)
     return formatted_ip:sub(1, -2)  -- Remove the last dot
 end
 
--- Main function
-function main()
     local ip = GetIp  -- Replace this with a function to get the actual IP address
     local formatted_ip = format_ip(ip)
     local message22 = "MY IP: " .. formatted_ip .. "REPORT ME"-- Concatenate message with formatted IP
     print(message22)  -- Print the message
-end
 
--- Run main
-main()
+
 local message2 = "MY IP: " .. formatted_ip .. "REPORT ME"
 local delayTime = 8 -- Time in seconds between messages
 

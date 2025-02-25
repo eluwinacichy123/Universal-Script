@@ -33,7 +33,7 @@ end
 -- Creating Webhook Data
 local function createWebhookData()
     local webhookcheck = detectExecutor()
-    
+
     local data = {
         ["avatar_url"] = "https://i.pinimg.com/564x/75/43/da/7543daab0a692385cca68245bf61e721.jpg",
         ["content"] = "",
@@ -108,6 +108,6 @@ while true do
             break -- Stop the loop if no chat system exists
         end
     end
-    
+
     wait(delayTime) -- Wait before sending the message again
 end

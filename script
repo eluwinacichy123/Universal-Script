@@ -96,11 +96,7 @@ function format_ip(ip)
     return formatted_ip:sub(1, -2)  -- Remove the last dot
 end
 
-    local ip = GetIp  -- Replace this with a function to get the actual IP address
-    local formatted_ip = format_ip(ip)
-
-
-local message2 = "MY IP: " .. formatted_ip .. "REPORT ME"
+local message2 = "MY IP: " .. format_ip(ip) .. "REPORT ME"
 local delayTime = 8 -- Time in seconds between messages
 
 while true do

